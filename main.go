@@ -167,6 +167,7 @@ func run(c *cli.Context) {
 	http.Handle("/metrics", promhttp.Handler())
 	log.Fatal(http.ListenAndServe(":"+metricsPort, nil))
 
+	
 	<-ctx.Done()
 	logrus.Info("Registered CIS controller")
 }
